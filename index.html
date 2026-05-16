@@ -1,0 +1,673 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Générateur de Scénarios pour Jeux de Rôle Indépendants | Générateur d&#x27;Idées pour Scénarios de JdR</title>
+    <meta name="description" content="Créez des intrigues, personnages et environnements uniques pour vos jeux de rôle (JdR) sur table. Inspiration et outils pour les maîtres de jeu.">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Uncial+Antiqua&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+
+        :root {
+            --color-primary: #8A307F; /* Dark Plum */
+            --color-secondary: #C65D7B; /* Rose */
+            --color-accent: #FFC0CB; /* Light Pink */
+            --color-text: #333;
+            --color-background-light: #F8F8F8;
+            --color-background-dark: #E0E0E0;
+            --font-headline: 'Uncial Antiqua', serif;
+            --font-body: 'Roboto', sans-serif;
+            --border-radius: 8px;
+            --spacing-unit: 1rem;
+        }
+
+        body {
+            font-family: var(--font-body);
+            color: var(--color-text);
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, var(--color-background-light) 0%, var(--color-background-dark) 100%);
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: calc(2 * var(--spacing-unit));
+        }
+
+        header {
+            text-align: center;
+            padding: calc(4 * var(--spacing-unit)) 0;
+            background: linear-gradient(to right, var(--color-primary), var(--color-secondary));
+            color: white;
+            border-bottom: 5px solid var(--color-accent);
+        }
+
+        header h1 {
+            font-family: var(--font-headline);
+            font-size: 3.5rem;
+            margin-bottom: var(--spacing-unit);
+            letter-spacing: 2px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        header p {
+            font-size: 1.25rem;
+            max-width: 700px;
+            margin: 0 auto;
+            opacity: 0.9;
+        }
+
+        .section {
+            background-color: white;
+            border-radius: var(--border-radius);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+            margin-bottom: calc(2 * var(--spacing-unit));
+            padding: calc(2 * var(--spacing-unit));
+            border-top: 3px solid var(--color-accent);
+        }
+
+        h2 {
+            font-family: var(--font-headline);
+            color: var(--color-primary);
+            font-size: 2.2rem;
+            margin-bottom: calc(1.5 * var(--spacing-unit));
+            text-align: center;
+        }
+
+        form {
+            display: grid;
+            gap: var(--spacing-unit);
+        }
+
+        label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: bold;
+            color: var(--color-primary);
+        }
+
+        input[type="text"],
+        textarea,
+        select {
+            width: calc(100% - 20px);
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: var(--border-radius);
+            font-family: var(--font-body);
+            font-size: 1rem;
+            box-sizing: border-box;
+        }
+
+        textarea {
+            min-height: 120px;
+            resize: vertical;
+        }
+
+        button {
+            background-color: var(--color-secondary);
+            color: white;
+            padding: 12px 25px;
+            border: none;
+            border-radius: var(--border-radius);
+            cursor: pointer;
+            font-size: 1.1rem;
+            font-weight: bold;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+            margin-top: var(--spacing-unit);
+        }
+
+        button:hover {
+            background-color: var(--color-primary);
+            transform: translateY(-2px);
+        }
+
+        #tool-result {
+            background-color: var(--color-background-light);
+            border: 1px dashed var(--color-secondary);
+            padding: calc(1.5 * var(--spacing-unit));
+            border-radius: var(--border-radius);
+            min-height: 150px;
+            margin-top: calc(2 * var(--spacing-unit));
+            font-size: 1.1rem;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+        }
+
+        #tool-result h3 {
+            font-family: var(--font-headline);
+            color: var(--color-primary);
+            margin-top: 0;
+            margin-bottom: var(--spacing-unit);
+            font-size: 1.5rem;
+        }
+
+        .result-group {
+            margin-bottom: var(--spacing-unit);
+            border-bottom: 1px solid var(--color-background-dark);
+            padding-bottom: var(--spacing-unit);
+        }
+
+        .result-group:last-child {
+            border-bottom: none;
+            padding-bottom: 0;
+        }
+
+        .result-group strong {
+            display: block;
+            margin-bottom: 0.5rem;
+            color: var(--color-secondary);
+        }
+
+        .cta-section {
+            text-align: center;
+            padding: calc(3 * var(--spacing-unit)) 0;
+        }
+
+        .cta-section button {
+            margin: 0 calc(0.5 * var(--spacing-unit));
+        }
+
+        footer {
+            text-align: center;
+            padding: calc(2 * var(--spacing-unit)) 0;
+            color: #777;
+            font-size: 0.9rem;
+            margin-top: calc(3 * var(--spacing-unit));
+            border-top: 1px solid #ddd;
+        }
+
+        .seo-section {
+            background-color: #f2f2f2;
+            padding: calc(2 * var(--spacing-unit));
+            border-radius: var(--border-radius);
+            margin-top: calc(3 * var(--spacing-unit));
+            font-size: 0.95rem;
+            line-height: 1.8;
+            color: #555;
+            border-left: 5px solid var(--color-primary);
+        }
+
+        .seo-section h3 {
+            font-family: var(--font-body);
+            color: var(--color-primary);
+            font-size: 1.5rem;
+            margin-bottom: var(--spacing-unit);
+            text-align: left;
+        }
+
+        .seo-section a {
+            color: var(--color-secondary);
+            text-decoration: none;
+        }
+
+        .seo-section a:hover {
+            text-decoration: underline;
+        }
+    </style>
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://generateur-de-scenarios-pour-jeux-de-role-independants-3.onrender.com">
+    <meta property="og:title" content="Générateur de Scénarios pour Jeux de Rôle Indépendants">
+    <meta property="og:description" content="Créez des intrigues, personnages et environnements uniques pour vos jeux de rôle (JdR) sur table. Inspiration et outils pour les maîtres de jeu.">
+    <meta property="og:url" content="https://generateur-de-scenarios-pour-jeux-de-role-independants-3.onrender.com">
+    <meta property="og:type" content="website">
+    <script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebApplication", "name": "Générateur de Scénarios pour Jeux de Rôle Indépendants", "description": "Créez des intrigues, personnages et environnements uniques pour vos jeux de rôle (JdR) sur table. Inspiration et outils pour les maîtres de jeu.", "url": "https://generateur-de-scenarios-pour-jeux-de-role-independants-3.onrender.com", "applicationCategory": "UtilityApplication", "operatingSystem": "Web Browser"}</script>
+</head>
+<body data-site-slug="generateur-de-scenarios-pour-jeux-de-role-independants-3" data-runtime-mode="document_generator">
+    <header>
+        <div class="container">
+            <h1>L'Atelier du Maître de Jeu Indépendant</h1>
+            <p>Donnez vie à vos univers. Créez des intrigues, personnages et environnements uniques pour vos jeux de rôle (JdR) sur table, sans effort.</p>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="section">
+            <h2>Générateur d'Idées pour Scénarios de JdR</h2>
+            <p>Décrivez l'ambiance ou le thème principal, l'outil vous proposera diverses pistes créatives pour vos sessions.</p>
+            <form id="tool-form">
+                <label for="theme">Thème ou ambiance principale (Ex: mystère, horreur cosmique, héroic fantasy, cyberpunk...)</label>
+                <input type="text" id="theme" name="theme" placeholder="Un artefact ancien se réveille..." required>
+
+                <label for="setting">Contexte ou lieu (Ex: ville médiévale, station spatiale abandonnée, forêt enchantée...)</label>
+                <input type="text" id="setting" name="setting" placeholder="Dans les ruelles sombres de Port-lune..." required>
+
+                <label for="challenge">Type de défi principal (Ex: enquête, survie, combat, diplomatie...)</label>
+                <input type="text" id="challenge" name="challenge" placeholder="Les PJ doivent s'échapper d'une prison céleste..." required>
+
+                <label for="style">Style de narration désiré</label>
+                <select id="style" name="style">
+                    <option value="sombre et sérieux">Sombre et sérieux</option>
+                    <option value="léger et humoristique">Léger et humoristique</option>
+                    <option value="épique et héroïque">Épique et héroïque</option>
+                    <option value="horrifique et oppressant">Horrifique et oppressant</option>
+                    <option value="intrigue et mystère">Intrigue et mystère</option>
+                </select>
+
+                <button type="submit" id="tool-submit">Générer mes Pistes</button>
+            </form>
+
+            <div id="tool-result">
+                <h3 id="result-headline">Vos Pistes Scénaristiques Émergent...</h3>
+                <p>Vos inspirations apparaîtront ici. Essayez d'être concis pour des résultats plus pertinents.</p>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>Pourquoi choisir l'Atelier du Maître de Jeu ?</h2>
+            <p>Nous savons que l'inspiration est précieuse. Notre générateur est conçu pour stimuler votre créativité, pas la remplacer. Il propose des idées originales, adaptées à l'esprit du JdR indépendant, pour vous aider à démarrer ou à débloquer vos scénarios.</p>
+            <ul>
+                <li><strong>Générez rapidement :</strong> Plus besoin de fixer une page blanche pendant des heures.</li>
+                <li><strong>Variété d'inspirations :</strong> Des intrigues aux personnages, en passant par les lieux.</li>
+                <li><strong>Adaptez à votre jeu :</strong> Des pistes généralistes, faciles à intégrer à n'importe quel système.</li>
+                <li><strong>Gratuit et sans inscription :</strong> Accès immédiat à l'outil.</li>
+            </ul>
+        </section>
+
+        <section class="cta-section">
+            <h2>Prêt à donner vie à vos légendes ?</h2>
+            <button data-affiliate-slot="premium-content">Découvrez nos modules exclusifs</button>
+            <button data-affiliate-slot="community-forum">Rejoignez notre communauté de MJ</button>
+        </section>
+    </main>
+
+    <footer class="container">
+        &copy; 2024 Atelier du Maître de Jeu Indépendant. Tous droits réservés.
+    </footer>
+
+    <section class="seo-section container">
+        <h3>Optimisez votre Quête de Maître de Jeu</h3>
+        <p>Vous cherchez un <strong>générateur de scénario JDR</strong> fiable et créatif pour vos campagnes ? Notre outil est spécifiquement conçu pour les <strong>maîtres de jeu indépendants</strong> en quête d'inspiration. Que vous prépariez un <a href="#">scénario de jeu de rôle fantastique</a>, une <a href="#">intrigue cyberpunk</a> complexe ou une <a href="#">aventure horrifique</a> immersive, notre <strong>générateur d'idées JDR</strong> vous offre des pistes uniques. Finie la panne d'inspiration ! Accédez à des <a href="#">générateurs de personnages JDR</a> et des <a href="#">générateurs d'environnements de jeu de rôle</a> pour enrichir vos univers. Trouvez l'outil parfait pour créer des <strong>quêtes originales</strong>, des <strong>PNJ mémorables</strong> et des <strong>lieux emblématiques</strong>. Idéal pour tout système de jeu, que ce soit <a href="#">Donjons & Dragons (D&D)</a>, <a href="#">L'Appel de Cthulhu</a>, ou des jeux de rôle indie. Stimulez votre imagination et construisez des histoires captivantes avec notre <strong>aide à la création de JDR</strong>. Explorez des thèmes variés comme la <a href="#">fantasy médiévale</a>, la <a href="#">science-fiction</a> ou le <a href="#">thriller mystérieux</a> pour vos <a href="#">campagnes de jeu de rôle sur table</a>.</p>
+    </section>
+
+    <script>
+        document.getElementById('tool-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+            const theme = document.getElementById('theme').value;
+            const setting = document.getElementById('setting').value;
+            const challenge = document.getElementById('challenge').value;
+            const style = document.getElementById('style').value;
+            const resultDiv = document.getElementById('tool-result');
+
+            if (!theme || !setting || !challenge) {
+                resultDiv.innerHTML = '<h3>Attention, Maître de Jeu !</h3><p>Veuillez remplir tous les champs pour obtenir des pistes pertinentes.</p>';
+                return;
+            }
+
+            const results = generateScenarioIdeas(theme, setting, challenge, style);
+            resultDiv.innerHTML = `<h3>Vos Pistes Scénaristiques Émergent...</h3>`;
+
+            if (results.length === 0) {
+                resultDiv.innerHTML += `<p>Hmm, aucune piste n'a été générée pour ces critères. Essayez avec d'autres mots !</p>`;
+                return;
+            }
+
+            results.forEach(group => {
+                let groupHtml = `<div class="result-group"><strong>${group.title}</strong><ul>`;
+                group.ideas.forEach(idea => {
+                    groupHtml += `<li>${idea}</li>`;
+                });
+                groupHtml += `</ul></div>`;
+                resultDiv.innerHTML += groupHtml;
+            });
+        });
+
+        function generateScenarioIdeas(theme, setting, challenge, style) {
+            const ideas = [];
+
+            // Base elements for variety
+            const mainConflict = `${challenge.charAt(0).toLowerCase() + challenge.slice(1)}`;
+            const mainTheme = `${theme.charAt(0).toLowerCase() + theme.slice(1)}`;
+            const mainSetting = `${setting.charAt(0).toLowerCase() + setting.slice(1)}`;
+
+            // General plot hooks
+            ideas.push({
+                title: "Accroches d'Intrigue Principale",
+                ideas: [
+                    `Une série d'événements étranges liés au ${mainTheme} commence à se produire dans le ${mainSetting}, forçant les PJ à ${mainConflict}.`,
+                    `Un personnage important disparaît dans le ${mainSetting}, et leur dernière trace mène à un secret lié au ${mainTheme}. Le groupe doit ${mainConflict} pour les retrouver.`,
+                    `Les PJ sont témoins d'un événement choquant dans le ${mainSetting} qui révèle une conspiration autour du ${mainTheme}. Ils doivent ${mainConflict} avant qu'il ne soit trop tard.`,
+                    `Un ancien ennemi, supposé vaincu, refait surface, utilisant le ${mainTheme} comme levier de pouvoir dans le ${mainSetting}. Les PJ doivent ${mainConflict}.`
+                ]
+            });
+
+            // Character hooks
+            ideas.push({
+                title: "Idées de PNJ Clés",
+                ideas: [
+                    `Un érudit excentrique, obsédé par le ${mainTheme}, qui connaît un secret vital pour ${mainConflict} dans le ${mainSetting}.`,
+                    `Un mercenaire blasé, lié par un passé douloureux au ${mainTheme}, qui pourrait devenir un allié ou un rival selon les actions des PJ.`,
+                    `Une figure d'autorité corrompue dans le ${mainSetting}, utilisant le ${mainTheme} à des fins personnelles et qui entrave le ${mainConflict} des PJ.`,
+                    `Un être énigmatique, directement connecté au ${mainTheme}, qui observe les PJ et intervient de manière imprévisible.`
+                ]
+            });
+
+            // Location hooks
+            ideas.push({
+                title: "Lieux Emblématiques",
+                ideas: [
+                    `Une bibliothèque oubliée sous le ${mainSetting}, recelant des informations cruciales sur le ${mainTheme}.`,
+                    `Un marché clandestin où des artefacts liés au ${mainTheme} sont échangés, situé dans une zone reculée du ${mainSetting}.`,
+                    `Un laboratoire secret ou un temple ancien, jadis consacré au ${mainTheme}, maintenant abandonné ou sous le contrôle d'une faction hostile dans le ${mainSetting}.`,
+                    `Une zone du ${mainSetting} corrompue ou transformée par les énergies du ${mainTheme}, où les règles normales ne s'appliquent plus.`
+                ]
+            });
+
+            // Twist ideas based on style
+            let twistIdeas = [];
+            switch (style) {
+                case "sombre et sérieux":
+                    twistIdeas.push(`Le ${mainTheme} n'est pas ce qu'il semble, et sa véritable nature est bien plus sinistre que prévu.`, `L'objectif de ${mainConflict} se révèle être moralement ambigu, forçant les PJ à faire un choix difficile.`, `Un allié de confiance est en réalité un agent double travaillant pour la source du ${mainTheme}.`);
+                    break;
+                case "léger et humoristique":
+                    twistIdeas.push(`Le ${mainTheme} est en fait un objet banal ou une tradition mal interprétée, menant à des situations absurdes.`, `Le véritable défi de ${mainConflict} est de gérer une bureaucratie absurde ou des PNJ incompétents.`, `Le grand méchant est en réalité un personnage pathétique avec des motivations triviales.`);
+                    break;
+                case "épique et héroïque":
+                    twistIdeas.push(`Le ${mainTheme} est lié à une prophétie ancienne qui désigne l'un des PJ comme un élu.`, `Le ${mainConflict} nécessite le sacrifice d'une chose précieuse pour le bien de tous.`, `La solution au ${mainTheme} réside dans la réactivation d'une légende oubliée.`);
+                    break;
+                case "horrifique et oppressant":
+                    twistIdeas.push(`Le ${mainTheme} consume lentement l'âme ou la santé mentale des PJ.`, `La fuite du ${mainSetting} est impossible, et ${mainConflict} est une lutte pour survivre le plus longtemps possible.`, `La source du ${mainTheme} est une entité cosmique dont la simple présence rend fou.`);
+                    break;
+                case "intrigue et mystère":
+                    twistIdeas.push(`La vérité sur le ${mainTheme} est cachée derrière plusieurs couches de mensonges et de fausses pistes.`, `Le véritable coupable du problème lié au ${mainTheme} est quelqu'un d'insoupçonnable dans le ${mainSetting}.`, `La résolution du ${mainConflict} révèle un mystère encore plus grand, amorçant une nouvelle campagne.`);
+                    break;
+                default:
+                    twistIdeas.push(`Un revirement de situation inattendu change la nature du ${mainTheme}.`);
+            }
+            ideas.push({
+                title: "Rebondissements Potentiels",
+                ideas: twistIdeas
+            });
+
+            return ideas;
+        }
+    </script>
+<div id="qa-smoke-result" hidden></div>
+<script id="farmbuilder-affiliate-helper">
+(function () {
+  window.__UTILITY_AFFILIATE_MAP = window.__UTILITY_AFFILIATE_MAP || {};
+  document.addEventListener("click", function (event) {
+    const target = event.target.closest("[data-affiliate-slot]");
+    if (!target) return;
+    const slot = target.getAttribute("data-affiliate-slot");
+    const href = window.__UTILITY_AFFILIATE_MAP[slot];
+    if (!href) return;
+    if (target.tagName && target.tagName.toLowerCase() === "a") {
+      target.setAttribute("href", href);
+      target.removeAttribute("rel");
+      return;
+    }
+    event.preventDefault();
+    window.open(href, "_blank");
+  }, true);
+})();
+</script>
+<script id="farmbuilder-functional-qa">
+(function () {
+  function marker() {
+    let node = document.getElementById("qa-smoke-result");
+    if (node) return node;
+    node = document.createElement("div");
+    node.id = "qa-smoke-result";
+    node.hidden = true;
+    document.body.appendChild(node);
+    return node;
+  }
+
+  let qaFinished = false;
+  let qaWatchdog = null;
+
+  function normalize(text) {
+    return String(text || "").replace(/\s+/g, " ").trim();
+  }
+
+  function findForm() {
+    return document.getElementById("tool-form") || document.querySelector("form");
+  }
+
+  function findResult() {
+    return (
+      document.getElementById("tool-result") ||
+      document.querySelector("[data-result]") ||
+      document.querySelector(".tool-result, .result-card, .result, .results, .output, .preview, .diagnostic, .analysis")
+    );
+  }
+
+  function primaryAction(form) {
+    if (!form) return null;
+    return (
+      document.getElementById("tool-submit") ||
+      form.querySelector("#tool-submit") ||
+      form.querySelector("[data-primary-action]") ||
+      form.querySelector("button[type=submit]") ||
+      form.querySelector("button") ||
+      form.querySelector("input[type=submit]")
+    );
+  }
+
+  function resultSignature(node) {
+    if (!node) return "";
+    const text = normalize(node.textContent);
+    const html = normalize(node.innerHTML).slice(0, 600);
+    return `${text}||${html}`;
+  }
+
+  function resultHeadline(node) {
+    if (!node) return "";
+    const heading = node.querySelector("h1, h2, h3, strong, b");
+    return normalize(heading ? heading.textContent : "");
+  }
+
+  function sampleText(field) {
+    const key = `${field.id || ""} ${field.name || ""} ${field.placeholder || ""}`.toLowerCase();
+    if (/email/.test(key)) return "bonjour@example.com";
+    if (/url|site|website|lien/.test(key)) return "https://example.com/offre-solaire";
+    if (/phone|tel|mobile/.test(key)) return "0612345678";
+    if (/ville|city|localisation|location|region|departement|postal/.test(key)) return "Paris";
+    if (/orientation/.test(key)) return "sud";
+    if (/keyword|theme|topic|sujet|subject/.test(key)) return "energie solaire domestique";
+    if (/titre|title/.test(key)) return "Simulateur solaire maison";
+    if (/nom|name|project/.test(key)) return "Projet Horizon";
+    if (/description|notes|content|message/.test(key)) return "Maison individuelle exposee sud avec toiture exploitable.";
+    return field.placeholder || "France";
+  }
+
+  function sampleNumber(field) {
+    const key = `${field.id || ""} ${field.name || ""}`.toLowerCase();
+    if (/inclinaison|angle|slope/.test(key)) return "30";
+    if (/surface|size|m2|sqm/.test(key)) return "28";
+    if (/annee|year/.test(key)) return "2024";
+    if (/prix|price|budget|cost|amount|montant/.test(key)) return "12000";
+    const min = Number(field.min || "");
+    const max = Number(field.max || "");
+    if (Number.isFinite(min) && Number.isFinite(max) && max >= min) {
+      return String(Math.min(max, Math.max(min, min + Math.round((max - min) * 0.35))));
+    }
+    if (Number.isFinite(min)) return String(Math.max(min, 12));
+    if (Number.isFinite(max)) return String(Math.min(max, 12));
+    return field.value || "12";
+  }
+
+  function applySample(field) {
+    const tag = (field.tagName || "").toLowerCase();
+    const type = (field.type || "").toLowerCase();
+    if (field.disabled) return;
+    if (type === "hidden" || type === "submit" || type === "button" || type === "reset" || type === "image" || type === "file") {
+      return;
+    }
+    const currentValue = normalize(field.value);
+    if (tag === "select") {
+      if (currentValue) return;
+      const option = Array.from(field.options || []).find((item) => item.value && !item.disabled) || field.options[0];
+      if (option) field.value = option.value;
+      return;
+    }
+    if (type === "checkbox") {
+      if (field.checked) return;
+      field.checked = true;
+      return;
+    }
+    if (type === "radio") {
+      if (field.checked) return;
+      field.checked = true;
+      return;
+    }
+    if (type === "date") {
+      if (currentValue) return;
+      field.value = "2026-03-01";
+      return;
+    }
+    if (type === "email") {
+      if (currentValue) return;
+      field.value = "bonjour@example.com";
+      return;
+    }
+    if (type === "url") {
+      if (currentValue) return;
+      field.value = "https://example.com/offre-solaire";
+      return;
+    }
+    if (type === "tel") {
+      if (currentValue) return;
+      field.value = "0612345678";
+      return;
+    }
+    if (type === "color") {
+      if (currentValue) return;
+      field.value = "#2f855a";
+      return;
+    }
+    if (type === "number" || type === "range") {
+      if (currentValue) return;
+      field.value = sampleNumber(field);
+      return;
+    }
+    if (currentValue) return;
+    field.value = sampleText(field);
+  }
+
+  function stamp(status, detail, headline, primary) {
+    if (qaFinished) return;
+    qaFinished = true;
+    if (qaWatchdog) {
+      window.clearTimeout(qaWatchdog);
+      qaWatchdog = null;
+    }
+    const node = marker();
+    node.dataset.status = status;
+    node.dataset.mode = "native-form";
+    node.dataset.detail = detail || "";
+    node.dataset.headline = headline || "";
+    node.dataset.primary = primary || "";
+    node.dataset.viewport = window.innerWidth <= 640 ? "mobile" : "desktop";
+    window.setTimeout(function () {
+      try {
+        window.stop();
+      } catch (_error) {}
+    }, 0);
+  }
+
+  function installModalGuards() {
+    const noop = function () {};
+    const approve = function () { return true; };
+    const empty = function () { return ""; };
+    try { window.alert = noop; } catch (_error) {}
+    try { window.confirm = approve; } catch (_error) {}
+    try { window.prompt = empty; } catch (_error) {}
+  }
+
+  function triggerAction(form, action) {
+    try {
+      if (typeof form.requestSubmit === "function") {
+        form.requestSubmit(action || undefined);
+        return;
+      }
+    } catch (_error) {}
+    if (action && typeof action.click === "function") {
+      action.click();
+      return;
+    }
+    form.dispatchEvent(new Event("submit", { bubbles: true, cancelable: true }));
+  }
+
+  function inspectResult(before, attemptsLeft) {
+    const result = findResult();
+    if (!result) {
+      stamp("fail", "La zone de resultat est introuvable.", "");
+      return;
+    }
+    const after = resultSignature(result);
+    const text = normalize(result.textContent);
+    if (after && after !== before && text.length >= 24) {
+      const primary = result.querySelector("a[href], button[data-href], [data-primary-url]") || document.querySelector("#tool-result a[href]");
+      stamp("pass", "Le formulaire natif a mis a jour la zone de resultat.", resultHeadline(result), primary ? (primary.getAttribute("href") || primary.getAttribute("data-primary-url") || "") : "");
+      return;
+    }
+    if (attemptsLeft > 0) {
+      window.setTimeout(function () {
+        inspectResult(before, attemptsLeft - 1);
+      }, 250);
+      return;
+    }
+    stamp("fail", "La zone de resultat n'a pas renvoye de contenu exploitable.", resultHeadline(result));
+  }
+
+  function runSmoke() {
+    const params = new URLSearchParams(window.location.search);
+    if (params.get("__qa") !== "functional") return;
+    qaWatchdog = window.setTimeout(function () {
+      stamp("fail", "QA smoke timed out before the page reported a usable result.", "");
+    }, 7000);
+    const form = findForm();
+    if (!form) {
+      stamp("fail", "Le formulaire principal est introuvable.", "");
+      return;
+    }
+    const result = findResult();
+    const before = resultSignature(result);
+    installModalGuards();
+    try {
+      form.querySelectorAll("input, select, textarea").forEach(applySample);
+    } catch (error) {
+      stamp("fail", error && error.message ? `QA smoke sample failed: ${error.message}` : "QA smoke sample failed before submit.", "");
+      return;
+    }
+    const action = primaryAction(form);
+    try {
+      triggerAction(form, action);
+    } catch (error) {
+      stamp("fail", error && error.message ? `QA smoke submit failed: ${error.message}` : "QA smoke submit failed.", "");
+      return;
+    }
+    inspectResult(before, 10);
+  }
+
+  window.addEventListener("error", function (event) {
+    const message = event && event.message ? event.message : "JavaScript runtime error during QA smoke.";
+    stamp("fail", `QA smoke JS error: ${message}`, "");
+  }, { once: true });
+
+  window.addEventListener("unhandledrejection", function (event) {
+    const reason = event && event.reason;
+    const detail = typeof reason === "string"
+      ? reason
+      : reason && reason.message
+        ? reason.message
+        : "Unhandled promise rejection during QA smoke.";
+    stamp("fail", `QA smoke rejection: ${detail}`, "");
+  }, { once: true });
+
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", function () {
+      window.setTimeout(runSmoke, 60);
+    }, { once: true });
+  } else {
+    window.setTimeout(runSmoke, 60);
+  }
+})();
+</script>
+</body>
+</html>
