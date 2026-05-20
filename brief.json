@@ -1,21 +1,21 @@
 {
-  "run_id": "run-1778969430819",
-  "job_index": 3,
+  "run_id": "run-1779314679234",
+  "job_index": 1,
   "params": {
     "owner_user_id": "user-1774822953462",
     "owner_username": "admin",
     "owner_display_name": "Administrator",
-    "count": 3,
+    "count": 1,
     "archetype": "generator",
-    "market": "France",
+    "market": "Growth republish",
     "language": "fr",
     "country": "FR",
-    "brief": "L'outil indispensable pour les créateurs de mondes et d'aventures de JdR.",
-    "notes": "Créez des intrigues, personnages et environnements uniques pour vos jeux de rôle (JdR) sur table. Inspiration et outils pour les maîtres de jeu.\nCiblant les créateurs de contenu pour le marché du jeu de rôle indépendant, avec une touche créative.",
-    "import_notes": "",
-    "growth_job_id": "",
-    "growth_slug": "",
-    "growth_kind": "",
+    "brief": "Créez des intrigues, personnages et environnements uniques pour vos jeux de rôle (JdR) sur table. Inspiration et outils pour les maîtres de jeu.",
+    "notes": "Growth module republish of an updated local artifact.",
+    "import_notes": "Growth module republish of an updated local artifact.",
+    "growth_job_id": "growth-1779314606639",
+    "growth_slug": "generateur-de-scenarios-pour-jeux-de-role-independants-3",
+    "growth_kind": "affiliate",
     "external_site_request_id": "",
     "external_client_ref": "",
     "external_source_label": "",
@@ -35,14 +35,14 @@
     "network_model_growth": "google/gemini-2.5-flash-lite:nitro",
     "network_blueprint_id": "",
     "mode": "production",
-    "run_kind": "generated_batch",
+    "run_kind": "import_deploy",
     "publish_target": "render",
     "requested_publish_target": "render",
     "allow_url_fallback": false,
     "railway_project_id_override": "",
     "railway_environment_id_override": "",
-    "railway_service_id_override": "",
-    "railway_service_name_override": "",
+    "railway_service_id_override": "srv-d84eqaog4nts73f5erq0",
+    "railway_service_name_override": "generateur-de-scenarios-pour-jeux-de-role-independants-3",
     "github_repo_private": true,
     "stage_models": {
       "ideation": "google/gemini-2.5-flash-lite:nitro",
@@ -51,238 +51,33 @@
       "qa": "anthropic/claude-haiku-4.5",
       "escalation": "anthropic/claude-sonnet-4.6"
     },
-    "archetype_display": "mixed batch",
+    "archetype_display": "file deploy",
     "archetype_mix": [
-      "calculator",
-      "tool",
+      "imported"
+    ],
+    "forced_slug": "generateur-de-scenarios-pour-jeux-de-role-independants-3",
+    "site_idea_title": "Générateur de Scénarios pour Jeux de Rôle Indépendants",
+    "site_idea_summary": "Créez des intrigues, personnages et environnements uniques pour vos jeux de rôle (JdR) sur table. Inspiration et outils pour les maîtres de jeu.",
+    "import_source_path": "/var/lib/utility-site-studio/data/growth-republish/growth-1779314606639/generateur-de-scenarios-pour-jeux-de-role-independants-3",
+    "import_root_path": "/var/lib/utility-site-studio/data/growth-republish/growth-1779314606639/generateur-de-scenarios-pour-jeux-de-role-independants-3",
+    "import_analysis_model": "preserved-analysis"
+  },
+  "import_analysis": {
+    "title": "Générateur de Scénarios pour Jeux de Rôle Indépendants",
+    "description": "Créez des intrigues, personnages et environnements uniques pour vos jeux de rôle (JdR) sur table. Inspiration et outils pour les maîtres de jeu.",
+    "summary": "Créez des intrigues, personnages et environnements uniques pour vos jeux de rôle (JdR) sur table. Inspiration et outils pour les maîtres de jeu.",
+    "notes": "Growth module republish of an updated local artifact.",
+    "archetype": "generator",
+    "language": "fr",
+    "country": "FR",
+    "market": "Growth republish",
+    "characteristics": [
+      "imported static site",
+      "ready file deploy",
       "generator"
     ],
-    "forced_design_theme": "zine-noise",
-    "forced_structure_preset": "story-commerce",
-    "site_idea_title": "Générateur de Scénarios pour Jeux de Rôle Indépendants",
-    "site_idea_summary": "Créez des intrigues, personnages et environnements uniques pour vos jeux de rôle (JdR) sur table. Inspiration et outils pour les maîtres de jeu."
+    "suggested_slug": "generateur-de-scenarios-pour-jeux-de-role-independants-3"
   },
-  "site_spec": {
-    "slug": "generateur-de-scenarios-pour-jeux-de-role-independants-3",
-    "theme": {
-      "name": "Zine Noise",
-      "slug": "zine-noise",
-      "eyebrow": "Independent Utility",
-      "family": "zine-noise",
-      "moods": [
-        "indie",
-        "bold",
-        "raw",
-        "expressive"
-      ],
-      "archetypes": [
-        "tool",
-        "generator"
-      ],
-      "niches": [
-        "creator tools",
-        "media tools",
-        "campaign tools",
-        "social utility",
-        "portfolios"
-      ],
-      "keywords": [
-        "zine",
-        "noise",
-        "raw",
-        "bold",
-        "indie"
-      ],
-      "token_index": [
-        "bold",
-        "campaign",
-        "creator",
-        "expressive",
-        "generator",
-        "independent",
-        "indie",
-        "media",
-        "noise",
-        "portfolios",
-        "raw",
-        "social",
-        "tool",
-        "tools",
-        "utility",
-        "zine"
-      ],
-      "font_embed": "https://fonts.googleapis.com/css2?family=Archivo+Black&family=Space+Grotesk:wght@400;500;700&display=swap",
-      "display_font": "\"Archivo Black\", sans-serif",
-      "body_font": "\"Space Grotesk\", sans-serif",
-      "layout": "asymmetric",
-      "card_style": "brutal",
-      "button_style": "slab",
-      "decor_style": "paper",
-      "hero_template": "0.88fr 1.12fr",
-      "seo_template": "1.18fr 0.82fr",
-      "feature_columns": 2,
-      "faq_columns": 3,
-      "hero_min_height": "78vh",
-      "panel_radius": "12px",
-      "card_radius": "14px",
-      "chip_radius": "14px",
-      "button_radius": "12px",
-      "outline_width": "3px",
-      "backdrop_blur": "16px",
-      "palette": {
-        "bg": "linear-gradient(150deg, #fef2f2 0%, #fecaca 40%, #111827 100%)",
-        "surface": "rgba(255,245,245,0.9)",
-        "surface_border": "#111827",
-        "text": "#111827",
-        "muted": "#374151",
-        "accent": "#dc2626",
-        "accent_alt": "#111827",
-        "hero_glow": "rgba(220, 38, 38, 0.16)",
-        "button_text": "#fff5f5",
-        "panel_alt": "rgba(255,255,255,0.54)",
-        "shadow": "12px 12px 0 rgba(17, 24, 39, 0.9)",
-        "input_fill": "rgba(255,255,255,0.5)"
-      }
-    },
-    "structure": {
-      "name": "Story Commerce",
-      "slug": "story-commerce",
-      "hero_variant": "poster",
-      "proof_variant": "steps",
-      "section_order": [
-        "features",
-        "proof",
-        "seo",
-        "faq"
-      ],
-      "feature_columns": 2,
-      "faq_columns": 2,
-      "family": "story-commerce",
-      "moods": [
-        "bold",
-        "editorial",
-        "conversion"
-      ],
-      "archetypes": [
-        "generator",
-        "tool",
-        "calculator"
-      ],
-      "niches": [
-        "creator",
-        "consumer",
-        "travel",
-        "marketing"
-      ],
-      "keywords": [
-        "story",
-        "banner",
-        "campaign",
-        "conversion"
-      ],
-      "token_index": [
-        "banner",
-        "bold",
-        "calculator",
-        "campaign",
-        "commerce",
-        "consumer",
-        "conversion",
-        "creator",
-        "editorial",
-        "faq",
-        "features",
-        "generator",
-        "marketing",
-        "poster",
-        "proof",
-        "seo",
-        "steps",
-        "story",
-        "tool",
-        "travel"
-      ]
-    },
-    "render_direction": "campaign-slab",
-    "render_direction_name": "Campaign Slab",
-    "page_blueprint": "magazine-fold",
-    "page_blueprint_name": "Magazine Fold",
-    "title": "Générateur de Scénarios pour Jeux de Rôle Indépendants",
-    "tagline": "Générateur d'Idées pour Scénarios de JdR",
-    "description": "Créez des intrigues, personnages et environnements uniques pour vos jeux de rôle (JdR) sur table. Inspiration et outils pour les maîtres de jeu.",
-    "feature_prefix": "Bloc",
-    "action": "Générer le document",
-    "cta_primary": "Générer mes Pistes",
-    "cta_secondary": "Consulter la FAQ",
-    "inputs": [
-      {
-        "id": "name",
-        "label": "Nom ou entreprise",
-        "type": "text",
-        "placeholder": "Studio Horizon",
-        "weight": 1.0
-      },
-      {
-        "id": "goal",
-        "label": "Objectif du document",
-        "type": "text",
-        "placeholder": "confirmation de demande",
-        "weight": 1.0
-      },
-      {
-        "id": "details",
-        "label": "Détails utiles",
-        "type": "text",
-        "placeholder": "date, montant, référence",
-        "weight": 1.0
-      }
-    ],
-    "hero_metrics": [
-      {
-        "value": "Campaign Slab",
-        "label": "Cadence"
-      },
-      {
-        "value": "3",
-        "label": "Entrées"
-      },
-      {
-        "value": "Brouillon généré",
-        "label": "Sortie"
-      }
-    ],
-    "trust_labels": [
-      "Campaign Slab",
-      "Générer mes Pistes",
-      "Brouillon généré",
-      "Utilitaire immédiat",
-      "Structure SEO claire"
-    ],
-    "result_label": "Brouillon généré",
-    "result_unit": "",
-    "runtime_mode": "document_generator",
-    "page_variant": "showcase",
-    "faq_topic": "Générateur de Scénarios pour Jeux de Rôle Indépendants",
-    "faq_entries": [
-      {
-        "question": "Pourquoi utiliser cet outil pour Générateur de Scénarios pour Jeux de Rôle Indépendants ?",
-        "answer": "Il aide à cadrer le besoin rapidement et à orienter vers une prochaine action claire sur le marché France."
-      },
-      {
-        "question": "Le résultat est-il immédiat ?",
-        "answer": "Oui. L'interface est pensée pour une réponse rapide, lisible et exploitable dès la première interaction."
-      },
-      {
-        "question": "Cette page est-elle adaptée au SEO ?",
-        "answer": "Oui. La structure mélange utilité, clarté éditoriale et signaux de confiance sans surcharger l'expérience."
-      }
-    ],
-    "seo_paragraphs": [
-      "Cette page capte une intention forte autour de Générateur de Scénarios pour Jeux de Rôle Indépendants et la transforme en action utile pour un public situé sur France.",
-      "Le format hero-first accélère la compréhension, réduit les frictions et améliore la lisibilité sur mobile comme sur desktop.",
-      "Le socle reste volontairement simple pour faciliter les tests, la QA continue et les variations SEO."
-    ],
-    "document_html": "<!DOCTYPE html>\n<html lang=\"fr\">\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n    <title>Générateur de Scénarios pour Jeux de Rôle Indépendants | Générateur d&#x27;Idées pour Scénarios de JdR</title>\n    <meta name=\"description\" content=\"Créez des intrigues, personnages et environnements uniques pour vos jeux de rôle (JdR) sur table. Inspiration et outils pour les maîtres de jeu.\">\n    <style>\n        @import url('https://fonts.googleapis.com/css2?family=Uncial+Antiqua&display=swap');\n        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');\n\n        :root {\n            --color-primary: #8A307F; /* Dark Plum */\n            --color-secondary: #C65D7B; /* Rose */\n            --color-accent: #FFC0CB; /* Light Pink */\n            --color-text: #333;\n            --color-background-light: #F8F8F8;\n            --color-background-dark: #E0E0E0;\n            --font-headline: 'Uncial Antiqua', serif;\n            --font-body: 'Roboto', sans-serif;\n            --border-radius: 8px;\n            --spacing-unit: 1rem;\n        }\n\n        body {\n            font-family: var(--font-body);\n            color: var(--color-text);\n            margin: 0;\n            padding: 0;\n            background: linear-gradient(135deg, var(--color-background-light) 0%, var(--color-background-dark) 100%);\n            line-height: 1.6;\n        }\n\n        .container {\n            max-width: 1000px;\n            margin: 0 auto;\n            padding: calc(2 * var(--spacing-unit));\n        }\n\n        header {\n            text-align: center;\n            padding: calc(4 * var(--spacing-unit)) 0;\n            background: linear-gradient(to right, var(--color-primary), var(--color-secondary));\n            color: white;\n            border-bottom: 5px solid var(--color-accent);\n        }\n\n        header h1 {\n            font-family: var(--font-headline);\n            font-size: 3.5rem;\n            margin-bottom: var(--spacing-unit);\n            letter-spacing: 2px;\n            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);\n        }\n\n        header p {\n            font-size: 1.25rem;\n            max-width: 700px;\n            margin: 0 auto;\n            opacity: 0.9;\n        }\n\n        .section {\n            background-color: white;\n            border-radius: var(--border-radius);\n            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);\n            margin-bottom: calc(2 * var(--spacing-unit));\n            padding: calc(2 * var(--spacing-unit));\n            border-top: 3px solid var(--color-accent);\n        }\n\n        h2 {\n            font-family: var(--font-headline);\n            color: var(--color-primary);\n            font-size: 2.2rem;\n            margin-bottom: calc(1.5 * var(--spacing-unit));\n            text-align: center;\n        }\n\n        form {\n            display: grid;\n            gap: var(--spacing-unit);\n        }\n\n        label {\n            display: block;\n            margin-bottom: 0.5rem;\n            font-weight: bold;\n            color: var(--color-primary);\n        }\n\n        input[type=\"text\"],\n        textarea,\n        select {\n            width: calc(100% - 20px);\n            padding: 10px;\n            border: 1px solid #ccc;\n            border-radius: var(--border-radius);\n            font-family: var(--font-body);\n            font-size: 1rem;\n            box-sizing: border-box;\n        }\n\n        textarea {\n            min-height: 120px;\n            resize: vertical;\n        }\n\n        button {\n            background-color: var(--color-secondary);\n            color: white;\n            padding: 12px 25px;\n            border: none;\n            border-radius: var(--border-radius);\n            cursor: pointer;\n            font-size: 1.1rem;\n            font-weight: bold;\n            transition: background-color 0.3s ease, transform 0.2s ease;\n            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);\n            margin-top: var(--spacing-unit);\n        }\n\n        button:hover {\n            background-color: var(--color-primary);\n            transform: translateY(-2px);\n        }\n\n        #tool-result {\n            background-color: var(--color-background-light);\n            border: 1px dashed var(--color-secondary);\n            padding: calc(1.5 * var(--spacing-unit));\n            border-radius: var(--border-radius);\n            min-height: 150px;\n            margin-top: calc(2 * var(--spacing-unit));\n            font-size: 1.1rem;\n            white-space: pre-wrap;\n            word-wrap: break-word;\n        }\n\n        #tool-result h3 {\n            font-family: var(--font-headline);\n            color: var(--color-primary);\n            margin-top: 0;\n            margin-bottom: var(--spacing-unit);\n            font-size: 1.5rem;\n        }\n\n        .result-group {\n            margin-bottom: var(--spacing-unit);\n            border-bottom: 1px solid var(--color-background-dark);\n            padding-bottom: var(--spacing-unit);\n        }\n\n        .result-group:last-child {\n            border-bottom: none;\n            padding-bottom: 0;\n        }\n\n        .result-group strong {\n            display: block;\n            margin-bottom: 0.5rem;\n            color: var(--color-secondary);\n        }\n\n        .cta-section {\n            text-align: center;\n            padding: calc(3 * var(--spacing-unit)) 0;\n        }\n\n        .cta-section button {\n            margin: 0 calc(0.5 * var(--spacing-unit));\n        }\n\n        footer {\n            text-align: center;\n            padding: calc(2 * var(--spacing-unit)) 0;\n            color: #777;\n            font-size: 0.9rem;\n            margin-top: calc(3 * var(--spacing-unit));\n            border-top: 1px solid #ddd;\n        }\n\n        .seo-section {\n            background-color: #f2f2f2;\n            padding: calc(2 * var(--spacing-unit));\n            border-radius: var(--border-radius);\n            margin-top: calc(3 * var(--spacing-unit));\n            font-size: 0.95rem;\n            line-height: 1.8;\n            color: #555;\n            border-left: 5px solid var(--color-primary);\n        }\n\n        .seo-section h3 {\n            font-family: var(--font-body);\n            color: var(--color-primary);\n            font-size: 1.5rem;\n            margin-bottom: var(--spacing-unit);\n            text-align: left;\n        }\n\n        .seo-section a {\n            color: var(--color-secondary);\n            text-decoration: none;\n        }\n\n        .seo-section a:hover {\n            text-decoration: underline;\n        }\n    </style>\n    <meta name=\"robots\" content=\"index, follow\">\n    <link rel=\"canonical\" href=\"https://generateur-de-scenarios-pour-jeux-de-role-independants-3.onrender.com\">\n    <meta property=\"og:title\" content=\"Générateur de Scénarios pour Jeux de Rôle Indépendants\">\n    <meta property=\"og:description\" content=\"Créez des intrigues, personnages et environnements uniques pour vos jeux de rôle (JdR) sur table. Inspiration et outils pour les maîtres de jeu.\">\n    <meta property=\"og:url\" content=\"https://generateur-de-scenarios-pour-jeux-de-role-independants-3.onrender.com\">\n    <meta property=\"og:type\" content=\"website\">\n    <script type=\"application/ld+json\">{\"@context\": \"https://schema.org\", \"@type\": \"WebApplication\", \"name\": \"Générateur de Scénarios pour Jeux de Rôle Indépendants\", \"description\": \"Créez des intrigues, personnages et environnements uniques pour vos jeux de rôle (JdR) sur table. Inspiration et outils pour les maîtres de jeu.\", \"url\": \"https://generateur-de-scenarios-pour-jeux-de-role-independants-3.onrender.com\", \"applicationCategory\": \"UtilityApplication\", \"operatingSystem\": \"Web Browser\"}</script>\n</head>\n<body data-site-slug=\"generateur-de-scenarios-pour-jeux-de-role-independants-3\" data-runtime-mode=\"document_generator\">\n    <header>\n        <div class=\"container\">\n            <h1>L'Atelier du Maître de Jeu Indépendant</h1>\n            <p>Donnez vie à vos univers. Créez des intrigues, personnages et environnements uniques pour vos jeux de rôle (JdR) sur table, sans effort.</p>\n        </div>\n    </header>\n\n    <main class=\"container\">\n        <section class=\"section\">\n            <h2>Générateur d'Idées pour Scénarios de JdR</h2>\n            <p>Décrivez l'ambiance ou le thème principal, l'outil vous proposera diverses pistes créatives pour vos sessions.</p>\n            <form id=\"tool-form\">\n                <label for=\"theme\">Thème ou ambiance principale (Ex: mystère, horreur cosmique, héroic fantasy, cyberpunk...)</label>\n                <input type=\"text\" id=\"theme\" name=\"theme\" placeholder=\"Un artefact ancien se réveille...\" required>\n\n                <label for=\"setting\">Contexte ou lieu (Ex: ville médiévale, station spatiale abandonnée, forêt enchantée...)</label>\n                <input type=\"text\" id=\"setting\" name=\"setting\" placeholder=\"Dans les ruelles sombres de Port-lune...\" required>\n\n                <label for=\"challenge\">Type de défi principal (Ex: enquête, survie, combat, diplomatie...)</label>\n                <input type=\"text\" id=\"challenge\" name=\"challenge\" placeholder=\"Les PJ doivent s'échapper d'une prison céleste...\" required>\n\n                <label for=\"style\">Style de narration désiré</label>\n                <select id=\"style\" name=\"style\">\n                    <option value=\"sombre et sérieux\">Sombre et sérieux</option>\n                    <option value=\"léger et humoristique\">Léger et humoristique</option>\n                    <option value=\"épique et héroïque\">Épique et héroïque</option>\n                    <option value=\"horrifique et oppressant\">Horrifique et oppressant</option>\n                    <option value=\"intrigue et mystère\">Intrigue et mystère</option>\n                </select>\n\n                <button type=\"submit\" id=\"tool-submit\">Générer mes Pistes</button>\n            </form>\n\n            <div id=\"tool-result\">\n                <h3 id=\"result-headline\">Vos Pistes Scénaristiques Émergent...</h3>\n                <p>Vos inspirations apparaîtront ici. Essayez d'être concis pour des résultats plus pertinents.</p>\n            </div>\n        </section>\n\n        <section class=\"section\">\n            <h2>Pourquoi choisir l'Atelier du Maître de Jeu ?</h2>\n            <p>Nous savons que l'inspiration est précieuse. Notre générateur est conçu pour stimuler votre créativité, pas la remplacer. Il propose des idées originales, adaptées à l'esprit du JdR indépendant, pour vous aider à démarrer ou à débloquer vos scénarios.</p>\n            <ul>\n                <li><strong>Générez rapidement :</strong> Plus besoin de fixer une page blanche pendant des heures.</li>\n                <li><strong>Variété d'inspirations :</strong> Des intrigues aux personnages, en passant par les lieux.</li>\n                <li><strong>Adaptez à votre jeu :</strong> Des pistes généralistes, faciles à intégrer à n'importe quel système.</li>\n                <li><strong>Gratuit et sans inscription :</strong> Accès immédiat à l'outil.</li>\n            </ul>\n        </section>\n\n        <section class=\"cta-section\">\n            <h2>Prêt à donner vie à vos légendes ?</h2>\n            <button data-affiliate-slot=\"premium-content\">Découvrez nos modules exclusifs</button>\n            <button data-affiliate-slot=\"community-forum\">Rejoignez notre communauté de MJ</button>\n        </section>\n    </main>\n\n    <footer class=\"container\">\n        &copy; 2024 Atelier du Maître de Jeu Indépendant. Tous droits réservés.\n    </footer>\n\n    <section class=\"seo-section container\">\n        <h3>Optimisez votre Quête de Maître de Jeu</h3>\n        <p>Vous cherchez un <strong>générateur de scénario JDR</strong> fiable et créatif pour vos campagnes ? Notre outil est spécifiquement conçu pour les <strong>maîtres de jeu indépendants</strong> en quête d'inspiration. Que vous prépariez un <a href=\"#\">scénario de jeu de rôle fantastique</a>, une <a href=\"#\">intrigue cyberpunk</a> complexe ou une <a href=\"#\">aventure horrifique</a> immersive, notre <strong>générateur d'idées JDR</strong> vous offre des pistes uniques. Finie la panne d'inspiration ! Accédez à des <a href=\"#\">générateurs de personnages JDR</a> et des <a href=\"#\">générateurs d'environnements de jeu de rôle</a> pour enrichir vos univers. Trouvez l'outil parfait pour créer des <strong>quêtes originales</strong>, des <strong>PNJ mémorables</strong> et des <strong>lieux emblématiques</strong>. Idéal pour tout système de jeu, que ce soit <a href=\"#\">Donjons & Dragons (D&D)</a>, <a href=\"#\">L'Appel de Cthulhu</a>, ou des jeux de rôle indie. Stimulez votre imagination et construisez des histoires captivantes avec notre <strong>aide à la création de JDR</strong>. Explorez des thèmes variés comme la <a href=\"#\">fantasy médiévale</a>, la <a href=\"#\">science-fiction</a> ou le <a href=\"#\">thriller mystérieux</a> pour vos <a href=\"#\">campagnes de jeu de rôle sur table</a>.</p>\n    </section>\n\n    <script>\n        document.getElementById('tool-form').addEventListener('submit', function(event) {\n            event.preventDefault();\n            const theme = document.getElementById('theme').value;\n            const setting = document.getElementById('setting').value;\n            const challenge = document.getElementById('challenge').value;\n            const style = document.getElementById('style').value;\n            const resultDiv = document.getElementById('tool-result');\n\n            if (!theme || !setting || !challenge) {\n                resultDiv.innerHTML = '<h3>Attention, Maître de Jeu !</h3><p>Veuillez remplir tous les champs pour obtenir des pistes pertinentes.</p>';\n                return;\n            }\n\n            const results = generateScenarioIdeas(theme, setting, challenge, style);\n            resultDiv.innerHTML = `<h3>Vos Pistes Scénaristiques Émergent...</h3>`;\n\n            if (results.length === 0) {\n                resultDiv.innerHTML += `<p>Hmm, aucune piste n'a été générée pour ces critères. Essayez avec d'autres mots !</p>`;\n                return;\n            }\n\n            results.forEach(group => {\n                let groupHtml = `<div class=\"result-group\"><strong>${group.title}</strong><ul>`;\n                group.ideas.forEach(idea => {\n                    groupHtml += `<li>${idea}</li>`;\n                });\n                groupHtml += `</ul></div>`;\n                resultDiv.innerHTML += groupHtml;\n            });\n        });\n\n        function generateScenarioIdeas(theme, setting, challenge, style) {\n            const ideas = [];\n\n            // Base elements for variety\n            const mainConflict = `${challenge.charAt(0).toLowerCase() + challenge.slice(1)}`;\n            const mainTheme = `${theme.charAt(0).toLowerCase() + theme.slice(1)}`;\n            const mainSetting = `${setting.charAt(0).toLowerCase() + setting.slice(1)}`;\n\n            // General plot hooks\n            ideas.push({\n                title: \"Accroches d'Intrigue Principale\",\n                ideas: [\n                    `Une série d'événements étranges liés au ${mainTheme} commence à se produire dans le ${mainSetting}, forçant les PJ à ${mainConflict}.`,\n                    `Un personnage important disparaît dans le ${mainSetting}, et leur dernière trace mène à un secret lié au ${mainTheme}. Le groupe doit ${mainConflict} pour les retrouver.`,\n                    `Les PJ sont témoins d'un événement choquant dans le ${mainSetting} qui révèle une conspiration autour du ${mainTheme}. Ils doivent ${mainConflict} avant qu'il ne soit trop tard.`,\n                    `Un ancien ennemi, supposé vaincu, refait surface, utilisant le ${mainTheme} comme levier de pouvoir dans le ${mainSetting}. Les PJ doivent ${mainConflict}.`\n                ]\n            });\n\n            // Character hooks\n            ideas.push({\n                title: \"Idées de PNJ Clés\",\n                ideas: [\n                    `Un érudit excentrique, obsédé par le ${mainTheme}, qui connaît un secret vital pour ${mainConflict} dans le ${mainSetting}.`,\n                    `Un mercenaire blasé, lié par un passé douloureux au ${mainTheme}, qui pourrait devenir un allié ou un rival selon les actions des PJ.`,\n                    `Une figure d'autorité corrompue dans le ${mainSetting}, utilisant le ${mainTheme} à des fins personnelles et qui entrave le ${mainConflict} des PJ.`,\n                    `Un être énigmatique, directement connecté au ${mainTheme}, qui observe les PJ et intervient de manière imprévisible.`\n                ]\n            });\n\n            // Location hooks\n            ideas.push({\n                title: \"Lieux Emblématiques\",\n                ideas: [\n                    `Une bibliothèque oubliée sous le ${mainSetting}, recelant des informations cruciales sur le ${mainTheme}.`,\n                    `Un marché clandestin où des artefacts liés au ${mainTheme} sont échangés, situé dans une zone reculée du ${mainSetting}.`,\n                    `Un laboratoire secret ou un temple ancien, jadis consacré au ${mainTheme}, maintenant abandonné ou sous le contrôle d'une faction hostile dans le ${mainSetting}.`,\n                    `Une zone du ${mainSetting} corrompue ou transformée par les énergies du ${mainTheme}, où les règles normales ne s'appliquent plus.`\n                ]\n            });\n\n            // Twist ideas based on style\n            let twistIdeas = [];\n            switch (style) {\n                case \"sombre et sérieux\":\n                    twistIdeas.push(`Le ${mainTheme} n'est pas ce qu'il semble, et sa véritable nature est bien plus sinistre que prévu.`, `L'objectif de ${mainConflict} se révèle être moralement ambigu, forçant les PJ à faire un choix difficile.`, `Un allié de confiance est en réalité un agent double travaillant pour la source du ${mainTheme}.`);\n                    break;\n                case \"léger et humoristique\":\n                    twistIdeas.push(`Le ${mainTheme} est en fait un objet banal ou une tradition mal interprétée, menant à des situations absurdes.`, `Le véritable défi de ${mainConflict} est de gérer une bureaucratie absurde ou des PNJ incompétents.`, `Le grand méchant est en réalité un personnage pathétique avec des motivations triviales.`);\n                    break;\n                case \"épique et héroïque\":\n                    twistIdeas.push(`Le ${mainTheme} est lié à une prophétie ancienne qui désigne l'un des PJ comme un élu.`, `Le ${mainConflict} nécessite le sacrifice d'une chose précieuse pour le bien de tous.`, `La solution au ${mainTheme} réside dans la réactivation d'une légende oubliée.`);\n                    break;\n                case \"horrifique et oppressant\":\n                    twistIdeas.push(`Le ${mainTheme} consume lentement l'âme ou la santé mentale des PJ.`, `La fuite du ${mainSetting} est impossible, et ${mainConflict} est une lutte pour survivre le plus longtemps possible.`, `La source du ${mainTheme} est une entité cosmique dont la simple présence rend fou.`);\n                    break;\n                case \"intrigue et mystère\":\n                    twistIdeas.push(`La vérité sur le ${mainTheme} est cachée derrière plusieurs couches de mensonges et de fausses pistes.`, `Le véritable coupable du problème lié au ${mainTheme} est quelqu'un d'insoupçonnable dans le ${mainSetting}.`, `La résolution du ${mainConflict} révèle un mystère encore plus grand, amorçant une nouvelle campagne.`);\n                    break;\n                default:\n                    twistIdeas.push(`Un revirement de situation inattendu change la nature du ${mainTheme}.`);\n            }\n            ideas.push({\n                title: \"Rebondissements Potentiels\",\n                ideas: twistIdeas\n            });\n\n            return ideas;\n        }\n    </script>\n<div id=\"qa-smoke-result\" hidden></div>\n<script id=\"farmbuilder-affiliate-helper\">\n(function () {\n  window.__UTILITY_AFFILIATE_MAP = window.__UTILITY_AFFILIATE_MAP || {};\n  document.addEventListener(\"click\", function (event) {\n    const target = event.target.closest(\"[data-affiliate-slot]\");\n    if (!target) return;\n    const slot = target.getAttribute(\"data-affiliate-slot\");\n    const href = window.__UTILITY_AFFILIATE_MAP[slot];\n    if (!href) return;\n    if (target.tagName && target.tagName.toLowerCase() === \"a\") {\n      target.setAttribute(\"href\", href);\n      target.removeAttribute(\"rel\");\n      return;\n    }\n    event.preventDefault();\n    window.open(href, \"_blank\");\n  }, true);\n})();\n</script>\n<script id=\"farmbuilder-functional-qa\">\n(function () {\n  function marker() {\n    let node = document.getElementById(\"qa-smoke-result\");\n    if (node) return node;\n    node = document.createElement(\"div\");\n    node.id = \"qa-smoke-result\";\n    node.hidden = true;\n    document.body.appendChild(node);\n    return node;\n  }\n\n  let qaFinished = false;\n  let qaWatchdog = null;\n\n  function normalize(text) {\n    return String(text || \"\").replace(/\\s+/g, \" \").trim();\n  }\n\n  function findForm() {\n    return document.getElementById(\"tool-form\") || document.querySelector(\"form\");\n  }\n\n  function findResult() {\n    return (\n      document.getElementById(\"tool-result\") ||\n      document.querySelector(\"[data-result]\") ||\n      document.querySelector(\".tool-result, .result-card, .result, .results, .output, .preview, .diagnostic, .analysis\")\n    );\n  }\n\n  function primaryAction(form) {\n    if (!form) return null;\n    return (\n      document.getElementById(\"tool-submit\") ||\n      form.querySelector(\"#tool-submit\") ||\n      form.querySelector(\"[data-primary-action]\") ||\n      form.querySelector(\"button[type=submit]\") ||\n      form.querySelector(\"button\") ||\n      form.querySelector(\"input[type=submit]\")\n    );\n  }\n\n  function resultSignature(node) {\n    if (!node) return \"\";\n    const text = normalize(node.textContent);\n    const html = normalize(node.innerHTML).slice(0, 600);\n    return `${text}||${html}`;\n  }\n\n  function resultHeadline(node) {\n    if (!node) return \"\";\n    const heading = node.querySelector(\"h1, h2, h3, strong, b\");\n    return normalize(heading ? heading.textContent : \"\");\n  }\n\n  function sampleText(field) {\n    const key = `${field.id || \"\"} ${field.name || \"\"} ${field.placeholder || \"\"}`.toLowerCase();\n    if (/email/.test(key)) return \"bonjour@example.com\";\n    if (/url|site|website|lien/.test(key)) return \"https://example.com/offre-solaire\";\n    if (/phone|tel|mobile/.test(key)) return \"0612345678\";\n    if (/ville|city|localisation|location|region|departement|postal/.test(key)) return \"Paris\";\n    if (/orientation/.test(key)) return \"sud\";\n    if (/keyword|theme|topic|sujet|subject/.test(key)) return \"energie solaire domestique\";\n    if (/titre|title/.test(key)) return \"Simulateur solaire maison\";\n    if (/nom|name|project/.test(key)) return \"Projet Horizon\";\n    if (/description|notes|content|message/.test(key)) return \"Maison individuelle exposee sud avec toiture exploitable.\";\n    return field.placeholder || \"France\";\n  }\n\n  function sampleNumber(field) {\n    const key = `${field.id || \"\"} ${field.name || \"\"}`.toLowerCase();\n    if (/inclinaison|angle|slope/.test(key)) return \"30\";\n    if (/surface|size|m2|sqm/.test(key)) return \"28\";\n    if (/annee|year/.test(key)) return \"2024\";\n    if (/prix|price|budget|cost|amount|montant/.test(key)) return \"12000\";\n    const min = Number(field.min || \"\");\n    const max = Number(field.max || \"\");\n    if (Number.isFinite(min) && Number.isFinite(max) && max >= min) {\n      return String(Math.min(max, Math.max(min, min + Math.round((max - min) * 0.35))));\n    }\n    if (Number.isFinite(min)) return String(Math.max(min, 12));\n    if (Number.isFinite(max)) return String(Math.min(max, 12));\n    return field.value || \"12\";\n  }\n\n  function applySample(field) {\n    const tag = (field.tagName || \"\").toLowerCase();\n    const type = (field.type || \"\").toLowerCase();\n    if (field.disabled) return;\n    if (type === \"hidden\" || type === \"submit\" || type === \"button\" || type === \"reset\" || type === \"image\" || type === \"file\") {\n      return;\n    }\n    const currentValue = normalize(field.value);\n    if (tag === \"select\") {\n      if (currentValue) return;\n      const option = Array.from(field.options || []).find((item) => item.value && !item.disabled) || field.options[0];\n      if (option) field.value = option.value;\n      return;\n    }\n    if (type === \"checkbox\") {\n      if (field.checked) return;\n      field.checked = true;\n      return;\n    }\n    if (type === \"radio\") {\n      if (field.checked) return;\n      field.checked = true;\n      return;\n    }\n    if (type === \"date\") {\n      if (currentValue) return;\n      field.value = \"2026-03-01\";\n      return;\n    }\n    if (type === \"email\") {\n      if (currentValue) return;\n      field.value = \"bonjour@example.com\";\n      return;\n    }\n    if (type === \"url\") {\n      if (currentValue) return;\n      field.value = \"https://example.com/offre-solaire\";\n      return;\n    }\n    if (type === \"tel\") {\n      if (currentValue) return;\n      field.value = \"0612345678\";\n      return;\n    }\n    if (type === \"color\") {\n      if (currentValue) return;\n      field.value = \"#2f855a\";\n      return;\n    }\n    if (type === \"number\" || type === \"range\") {\n      if (currentValue) return;\n      field.value = sampleNumber(field);\n      return;\n    }\n    if (currentValue) return;\n    field.value = sampleText(field);\n  }\n\n  function stamp(status, detail, headline, primary) {\n    if (qaFinished) return;\n    qaFinished = true;\n    if (qaWatchdog) {\n      window.clearTimeout(qaWatchdog);\n      qaWatchdog = null;\n    }\n    const node = marker();\n    node.dataset.status = status;\n    node.dataset.mode = \"native-form\";\n    node.dataset.detail = detail || \"\";\n    node.dataset.headline = headline || \"\";\n    node.dataset.primary = primary || \"\";\n    node.dataset.viewport = window.innerWidth <= 640 ? \"mobile\" : \"desktop\";\n    window.setTimeout(function () {\n      try {\n        window.stop();\n      } catch (_error) {}\n    }, 0);\n  }\n\n  function installModalGuards() {\n    const noop = function () {};\n    const approve = function () { return true; };\n    const empty = function () { return \"\"; };\n    try { window.alert = noop; } catch (_error) {}\n    try { window.confirm = approve; } catch (_error) {}\n    try { window.prompt = empty; } catch (_error) {}\n  }\n\n  function triggerAction(form, action) {\n    try {\n      if (typeof form.requestSubmit === \"function\") {\n        form.requestSubmit(action || undefined);\n        return;\n      }\n    } catch (_error) {}\n    if (action && typeof action.click === \"function\") {\n      action.click();\n      return;\n    }\n    form.dispatchEvent(new Event(\"submit\", { bubbles: true, cancelable: true }));\n  }\n\n  function inspectResult(before, attemptsLeft) {\n    const result = findResult();\n    if (!result) {\n      stamp(\"fail\", \"La zone de resultat est introuvable.\", \"\");\n      return;\n    }\n    const after = resultSignature(result);\n    const text = normalize(result.textContent);\n    if (after && after !== before && text.length >= 24) {\n      const primary = result.querySelector(\"a[href], button[data-href], [data-primary-url]\") || document.querySelector(\"#tool-result a[href]\");\n      stamp(\"pass\", \"Le formulaire natif a mis a jour la zone de resultat.\", resultHeadline(result), primary ? (primary.getAttribute(\"href\") || primary.getAttribute(\"data-primary-url\") || \"\") : \"\");\n      return;\n    }\n    if (attemptsLeft > 0) {\n      window.setTimeout(function () {\n        inspectResult(before, attemptsLeft - 1);\n      }, 250);\n      return;\n    }\n    stamp(\"fail\", \"La zone de resultat n'a pas renvoye de contenu exploitable.\", resultHeadline(result));\n  }\n\n  function runSmoke() {\n    const params = new URLSearchParams(window.location.search);\n    if (params.get(\"__qa\") !== \"functional\") return;\n    qaWatchdog = window.setTimeout(function () {\n      stamp(\"fail\", \"QA smoke timed out before the page reported a usable result.\", \"\");\n    }, 7000);\n    const form = findForm();\n    if (!form) {\n      stamp(\"fail\", \"Le formulaire principal est introuvable.\", \"\");\n      return;\n    }\n    const result = findResult();\n    const before = resultSignature(result);\n    installModalGuards();\n    try {\n      form.querySelectorAll(\"input, select, textarea\").forEach(applySample);\n    } catch (error) {\n      stamp(\"fail\", error && error.message ? `QA smoke sample failed: ${error.message}` : \"QA smoke sample failed before submit.\", \"\");\n      return;\n    }\n    const action = primaryAction(form);\n    try {\n      triggerAction(form, action);\n    } catch (error) {\n      stamp(\"fail\", error && error.message ? `QA smoke submit failed: ${error.message}` : \"QA smoke submit failed.\", \"\");\n      return;\n    }\n    inspectResult(before, 10);\n  }\n\n  window.addEventListener(\"error\", function (event) {\n    const message = event && event.message ? event.message : \"JavaScript runtime error during QA smoke.\";\n    stamp(\"fail\", `QA smoke JS error: ${message}`, \"\");\n  }, { once: true });\n\n  window.addEventListener(\"unhandledrejection\", function (event) {\n    const reason = event && event.reason;\n    const detail = typeof reason === \"string\"\n      ? reason\n      : reason && reason.message\n        ? reason.message\n        : \"Unhandled promise rejection during QA smoke.\";\n    stamp(\"fail\", `QA smoke rejection: ${detail}`, \"\");\n  }, { once: true });\n\n  if (document.readyState === \"loading\") {\n    document.addEventListener(\"DOMContentLoaded\", function () {\n      window.setTimeout(runSmoke, 60);\n    }, { once: true });\n  } else {\n    window.setTimeout(runSmoke, 60);\n  }\n})();\n</script>\n</body>\n</html>",
-    "generation_mode": "direct_html"
-  }
+  "source_path": "/var/lib/utility-site-studio/data/growth-republish/growth-1779314606639/generateur-de-scenarios-pour-jeux-de-role-independants-3",
+  "deploy_root": "/var/lib/utility-site-studio/data/growth-republish/growth-1779314606639/generateur-de-scenarios-pour-jeux-de-role-independants-3"
 }
